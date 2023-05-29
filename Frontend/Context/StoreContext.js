@@ -5,8 +5,7 @@ import axios from "axios";
 export const StoreContext = createContext();
 
 const StoreContextProvider = ({ children }) => {
- 
-  const [ipAddress, setIpAddress] = useState("192.168.8.100");
+  const [ipAddress, setIpAddress] = useState("192.168.215.218");
   const [userEmail, setUserEmail] = useState("");
   const [data, setData] = useState([]);
   const [basket, setBasket] = useState([]);
@@ -14,7 +13,6 @@ const StoreContextProvider = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [PurchaseHistory, setPurchaseHistory] = useState([]);
   const [nbrsPurchaseHistory, setNbrsPurchaseHistory] = useState(0);
-
 
   const RandomOrderNumber = (max) => {
     return Math.floor(Math.random() * max);
