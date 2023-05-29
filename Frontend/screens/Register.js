@@ -9,7 +9,6 @@ import {
   Image,
 } from "react-native";
 import { StoreContext } from "../Context/StoreContext";
-
 export default function Register({ navigation }) {
   const { ipAddress } = useContext(StoreContext);
   const [username, setUsername] = useState("");
@@ -21,14 +20,13 @@ export default function Register({ navigation }) {
     if (password !== confirmPass) {
       alert("Passwords do not match");
     } else if (!validateEmail(email)) {
-      alert("Invalid email address");
+      alert("Warning", "Invalid email address");
     } else if (
       username !== "" &&
       email !== "" &&
       password !== "" &&
       confirmPass !== ""
     ) {
-      alert("You have successfully registered");
       addUser();
       navigation.navigate("Login");
     } else {
@@ -40,8 +38,6 @@ export default function Register({ navigation }) {
     const emailRegex = /\S+@\S+\.\S+/;
     return emailRegex.test(email);
   };
-
-  //const ipAddress = "192.168.135.218";
 
   const addUser = async () => {
     try {
@@ -55,7 +51,7 @@ export default function Register({ navigation }) {
         `http://${ipAddress}:8050/user/add`,
         newUser
       );
-      alert(response.data);
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }

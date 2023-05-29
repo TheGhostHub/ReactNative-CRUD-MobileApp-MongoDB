@@ -6,13 +6,13 @@ import {
   Pressable,
   Image,
 } from "react-native";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import { useState } from "react";
 import { StoreContext } from "../Context/StoreContext";
 
 const Login = ({ navigation }) => {
-  const { setUserEmail, ipAddress, setPurchaseHistory } =
+  const { setUserEmail, ipAddress } =
     useContext(StoreContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,6 @@ const Login = ({ navigation }) => {
 
   async function login(e) {
     e.preventDefault();
-    //const ipAddress = "192.168.135.218";
     await axios
       .post(`http://${ipAddress}:8050/user/login`, {
         email: email,
@@ -31,7 +30,6 @@ const Login = ({ navigation }) => {
       })
       .then((res) => {
         console.log(res.status);
-        alert("Login success");
         setUserEmail(email);
         navigation.navigate("ClientInterface");
       })

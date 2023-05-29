@@ -7,13 +7,13 @@ router.route("/add").post(async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const encryptedPass = await bycrypt.hash(password, 10);
-  //create new object for student model
+  //create new object for user model
   const newUser = new User({
     username,
     email,
     password: encryptedPass,
   });
-  //Meka javascript promise ekak then eken wenne success unoth "Student added" kiyala message ekak enawa
+  //Meka javascript promise ekak then eken wenne success unoth "User added" kiyala message ekak enawa
   await newUser
     .save()
     .then(() => {
