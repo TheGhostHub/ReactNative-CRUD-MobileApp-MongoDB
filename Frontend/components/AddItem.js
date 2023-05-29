@@ -49,7 +49,7 @@ const AddItem = () => {
         <Image source={{ uri: picture }} style={styles.img} />
         <Text style={styles.date}> {release_date}</Text>
         <Text color="gold">New</Text>
-        <Text style={styles.nm}>{name}</Text>
+        <Text style={styles.nm}>{name.toUpperCase()}</Text>
         <Text style={styles.price}>$ {price}</Text>
         <Button
           onPress={() => addToCart()}
@@ -70,9 +70,10 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   img: {
-    width: 450,
-    height: 500,
+    width: '98%',
+    height: 400,
     margin: "auto",
+    borderRadius:15,
   },
   date: {
     fontSize: 10,

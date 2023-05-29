@@ -111,7 +111,7 @@ const Card = () => {
             }
           />
           <Pressable style={styles.button} onPress={payment}>
-            <Text style={styles.text}>PAYMENT</Text>
+            <Text style={styles.text}>Conform Payment</Text>
           </Pressable>
         </View>
       ) : (
@@ -140,9 +140,8 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 32,
     elevation: 3,
-    backgroundColor: "black",
-    borderBottomRightRadius: 20,
-    borderBottomLeftRadius: 20,
+    backgroundColor: "##f58225",
+    borderRadius:20,
   },
   text: {
     fontSize: 16,
