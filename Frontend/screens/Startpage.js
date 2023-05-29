@@ -10,14 +10,10 @@ export default function StartScreen({ navigation }) {
     return () => clearTimeout(timer);
   }, [navigation]);
 
-  const goToLogin = () => {
-    clearTimeout(timer);
-    navigation.navigate("Login");
-  };
 
   return (
     <View style={{ height: '100%', width: '100%' }}>
-      <TouchableOpacity onPress={goToLogin}>
+      <TouchableOpacity >
         <ImageBackground style={{ height: '100%', width: '100%' }} source={require('../assets/startimage.jpeg')} >
         </ImageBackground>
       </TouchableOpacity>
