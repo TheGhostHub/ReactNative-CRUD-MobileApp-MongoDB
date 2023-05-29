@@ -6,11 +6,7 @@ export const StoreContext = createContext();
 
 const StoreContextProvider = ({ children }) => {
   //Client
-<<<<<<< HEAD
   const [ipAddress, setIpAddress] = useState("192.168.8.100");
-=======
-  const [ipAddress, setIpAddress] = useState("192.168.215.218");
->>>>>>> 3a4ffba8c45092a8022696067679ad4b557e72b6
   const [userEmail, setUserEmail] = useState("");
   const [data, setData] = useState([]);
   const [basket, setBasket] = useState([]);
