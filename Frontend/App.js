@@ -9,10 +9,9 @@ import Register from "./screens/Register";
 import Home from "./screens/Home";
 import Card from "./screens/Card";
 import AddItem from "./components/AddItem";
-import StartScreen from './screens/Startpage';
 import StoreContextProvider, { StoreContext } from "./Context/StoreContext";
 import PurchaseHistoryDetails from "./screens/PurchaseHistory";
-
+import StartScreen from './screens/Startpage'
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
