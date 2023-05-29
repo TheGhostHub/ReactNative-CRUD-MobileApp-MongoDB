@@ -7,7 +7,7 @@ import { StoreContext } from "../Context/StoreContext";
 export default function HomeScreen() {
   const { data } = useContext(StoreContext);
 
-  const renderStudentItem = ({ item }) => (
+  const renderItem = ({ item }) => (
     <View style={styles.studentContainer}>
       {/* <Text style={styles.studentName}>{item.firstname}</Text>
       <Text style={styles.studentEmail}>{item.email}</Text> */}
@@ -27,7 +27,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <FlatList
         data={data}
-        renderItem={renderStudentItem}
+        renderItem={renderItem}
         keyExtractor={keyExtractor}
       />
     </View>

@@ -20,8 +20,7 @@ const Item = ({ name, picture, price, _id, release_date }) => {
       <TouchableOpacity onPress={() => ClickImg()}>
         <Image source={{ uri: picture }} style={styles.img} />
       </TouchableOpacity>
-      <Text color="red">New</Text>
-      <Text style={styles.nm}>{name}</Text>
+      <Text style={styles.nm}>{name.toUpperCase()}</Text>
       <Text style={styles.price}>$ {price}</Text>
     </View>
   );
@@ -30,7 +29,7 @@ const Item = ({ name, picture, price, _id, release_date }) => {
 const styles = StyleSheet.create({
   box: {
     flex: 1,
-    padding: 10,
+    padding: 5,
     alignItems: "center",
     paddingBottom: 30,
   },
@@ -44,6 +43,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     maxWidth: 250,
     textAlign: "center",
+    
     marginTop: 10,
   },
   price: {
