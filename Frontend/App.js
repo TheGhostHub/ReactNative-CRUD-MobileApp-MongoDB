@@ -9,6 +9,7 @@ import Register from "./screens/Register";
 import Home from "./screens/Home";
 import Card from "./screens/Card";
 import AddItem from "./components/AddItem";
+import StartScreen from './screens/Startpage';
 import StoreContextProvider, { StoreContext } from "./Context/StoreContext";
 import PurchaseHistoryDetails from "./screens/PurchaseHistory";
 
@@ -20,7 +21,8 @@ export default function App() {
     <StoreContextProvider>
       <NavigationContainer>
         <StatusBar backgroundColor="#212A3E" />
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName="StartScreen" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="StartScreen" component={StartScreen} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />
           <Stack.Screen name="ClientInterface" component={ClientInterface} />
