@@ -6,7 +6,11 @@ export const StoreContext = createContext();
 
 const StoreContextProvider = ({ children }) => {
   //Client
+<<<<<<< HEAD
   const [ipAddress, setIpAddress] = useState("192.168.8.100");
+=======
+  const [ipAddress, setIpAddress] = useState("192.168.215.218");
+>>>>>>> 3a4ffba8c45092a8022696067679ad4b557e72b6
   const [userEmail, setUserEmail] = useState("");
   const [data, setData] = useState([]);
   const [basket, setBasket] = useState([]);
@@ -23,8 +27,6 @@ const StoreContextProvider = ({ children }) => {
   const RandomOrderNumber = (max) => {
     return Math.floor(Math.random() * max);
   };
-  //const ipAddress = "192.168.135.218";
-
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -33,8 +35,6 @@ const StoreContextProvider = ({ children }) => {
     try {
       const response = await axios.get(`http://${ipAddress}:8050/product/`);
       setData(response.data);
-      //console.log(response.data);
-      //console.log(response.data[0]._id);
     } catch (error) {
       console.log(error);
     }

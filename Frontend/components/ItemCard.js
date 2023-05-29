@@ -14,20 +14,16 @@ const ItemCard = ({ name, picture, price, _id, release_date }) => {
   const {
     setBasket,
     setNbrsProductbag,
-    nbrsProductsBag,
     setTotalPrice,
-    totalPrice,
     userEmail,
     ipAddress,
   } = useContext(StoreContext);
 
-  //const ipAddress = "192.168.135.218";
   const deleteItem = (_id) => {
     axios
       .delete(`http://${ipAddress}:8050/cart/delete/${_id}`)
       .then((res) => {
         console.log(res.data); // Optional: Log the deleted student data
-        //getStudents(); // Refresh the student list after deletion
         fetchCartItems();
       })
       .catch((err) => {
@@ -62,7 +58,6 @@ const ItemCard = ({ name, picture, price, _id, release_date }) => {
         <TouchableOpacity>
           <Image source={{ uri: picture }} style={styles.img} />
         </TouchableOpacity>
-        {/* <Text color="gold">New</Text> */}
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.price}>$ {price}</Text>
         <TouchableOpacity

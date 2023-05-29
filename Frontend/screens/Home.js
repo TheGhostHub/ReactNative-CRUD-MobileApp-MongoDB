@@ -9,8 +9,6 @@ export default function HomeScreen() {
 
   const renderItem = ({ item }) => (
     <View style={styles.studentContainer}>
-      {/* <Text style={styles.studentName}>{item.firstname}</Text>
-      <Text style={styles.studentEmail}>{item.email}</Text> */}
       <Item {...item} />
     </View>
   );

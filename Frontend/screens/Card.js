@@ -5,7 +5,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { StoreContext } from "../Context/StoreContext";
 import ItemCard from "../components/ItemCard";
 import axios from "axios";
-
 const Card = () => {
   const {
     basket,
@@ -14,14 +13,11 @@ const Card = () => {
     setBasket,
     setNbrsProductbag,
     setTotalPrice,
-    setNbrsPurchaseHistory,
-    nbrsProductsBag,
     dateTime,
     RandomOrderNumber,
     userEmail,
     ipAddress,
   } = useContext(StoreContext);
-  //const ipAddress = "192.168.135.218";
   function addOrder() {
     axios
       .post(`http://${ipAddress}:8050/order/add`, {
@@ -58,8 +54,7 @@ const Card = () => {
     axios
       .delete(`http://${ipAddress}:8050/cart/delete-all/${userEmail}`)
       .then((res) => {
-        console.log(res.data); // Optional: Log the deleted student data
-        //getStudents(); // Refresh the student list after deletion
+        console.log(res.data);
         fetchCartItems();
       })
       .catch((err) => {
@@ -73,7 +68,6 @@ const Card = () => {
     setBasket([]);
     setNbrsProductbag(0); // tab icon = 0
     setTotalPrice(0); // total price text into Card components = 0
-
     alert("Payment successful");
   };
 

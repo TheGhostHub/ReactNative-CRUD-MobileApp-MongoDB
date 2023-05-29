@@ -1,5 +1,5 @@
-import { View, FlatList, Image, StyleSheet } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import { View, FlatList, StyleSheet } from "react-native";
+import React, { useContext, useEffect } from "react";
 import { Text } from "@react-native-material/core";
 import { StoreContext } from "../Context/StoreContext";
 import axios from "axios";
@@ -18,8 +18,6 @@ const PurchaseHistoryDetails = () => {
         `http://${ipAddress}:8050/order/orders/${userEmail}`
       );
       setPurchaseHistory(response.data);
-      //console.log(response.data);
-      //console.log(response.data[0]._id);
     } catch (error) {
       console.log(error);
     }
@@ -27,7 +25,6 @@ const PurchaseHistoryDetails = () => {
 
   return (
     <View>
-      {/* Display the items in the order */}
       <FlatList
         data={PurchaseHistory}
         renderItem={({ item }) => (

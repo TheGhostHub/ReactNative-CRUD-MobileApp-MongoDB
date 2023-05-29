@@ -1,6 +1,29 @@
 const router = require("express").Router();
 const Products = require("../models/products");
 
+router.route("/add").post(async (req, res) => {
+  const picture = req.body.picture;
+  const price = req.body.price;
+  const name = req.body.name;
+  const release_date = req.body.release_date;
+  const addProduct = new Products({
+    picture,
+    price,
+    name,
+    release_date,
+  });
+  //Meka javascript promise ekak then eken wenne success unoth "Student added" kiyala message ekak enawa
+  await addProduct
+    .save()
+    .then(() => {
+      res.json("Product Added");
+    })
+    .catch((err) => {
+      //error ekak awoth eka console eken capture krnw
+      console.log(err);
+    });
+});
+
 router.route("/").get((req, res) => {
   Products.find()
     .then((products) => {

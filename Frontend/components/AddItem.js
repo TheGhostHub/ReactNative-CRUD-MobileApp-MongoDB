@@ -1,7 +1,7 @@
-import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import { Button, Text } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { useRoute } from "@react-navigation/native";
 import { ScrollView } from "react-native";
 import { StoreContext } from "../Context/StoreContext";
@@ -19,8 +19,6 @@ const AddItem = () => {
   } = useContext(StoreContext);
   const route = useRoute();
   const { price, picture, name, release_date } = route.params;
-  //const ipAddress = "192.168.135.218";
-
   const addItem = async () => {
     await axios
       .post(`http://${ipAddress}:8050/cart/add/`, {
@@ -30,7 +28,6 @@ const AddItem = () => {
         userEmail: userEmail,
       })
       .then((res) => {
-        alert("Item Added");
         console.log(res.data);
       })
       .catch((err) => {
