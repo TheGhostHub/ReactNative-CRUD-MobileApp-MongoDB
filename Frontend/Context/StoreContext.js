@@ -5,7 +5,7 @@ import axios from "axios";
 export const StoreContext = createContext();
 
 const StoreContextProvider = ({ children }) => {
-  //Client
+ 
   const [ipAddress, setIpAddress] = useState("192.168.215.218");
   const [userEmail, setUserEmail] = useState("");
   const [data, setData] = useState([]);
@@ -15,10 +15,6 @@ const StoreContextProvider = ({ children }) => {
   const [PurchaseHistory, setPurchaseHistory] = useState([]);
   const [nbrsPurchaseHistory, setNbrsPurchaseHistory] = useState(0);
 
-  //Admin
-  const [received, setReceived] = useState([]);
-  const [allClosed, setAllClosed] = useState([]);
-  const [packed, setPacked] = useState([]);
 
   const RandomOrderNumber = (max) => {
     return Math.floor(Math.random() * max);
