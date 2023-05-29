@@ -30,11 +30,13 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 5,
     alignItems: "center",
-    paddingBottom: 30,
+    paddingBottom: 10,
+    margin:30,
+
   },
   img: {
     width: 250,
-    height: 300,
+    height: 250,
     margin: "auto",
     borderRadius: 20,
   },

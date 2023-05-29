@@ -8,10 +8,10 @@ export default function HomeScreen() {
   const { data } = useContext(StoreContext);
 
   const renderItem = ({ item }) => (
-    <View style={styles.studentContainer}>
-      <Item {...item} />
+    <View style={styles.homebody}>
+      <Item {...item} /> 
     </View>
-  );
+  );// It's a convenient way to pass multiple props without explicitly specifying each one {...item}
 
   const keyExtractor = (item) => {
     if (item._id) {
@@ -35,28 +35,16 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#ecf0f1",
     alignItems: "center",
     justifyContent: "center",
+    
   },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  studentContainer: {
-    marginBottom: 10,
-    padding: 10,
+  homebody: {
+    margin:10,
+    padding: 5,
     borderWidth: 1,
     borderColor: "gray",
     borderRadius: 5,
-  },
-  studentName: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  studentEmail: {
-    fontSize: 14,
-    color: "gray",
   },
 });
