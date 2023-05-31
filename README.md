@@ -24,22 +24,9 @@ Target audience:
 Screenshots
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Login.js
+![Screenshot_20230530_001942_host exp exponent](https://github.com/TheGhostHub/ReactNative-CRUD-MobileApp-MongoDB/assets/67100910/cd7a14b0-cea3-426d-aa74-e26fb4bb1b22)
+![Screenshot_20230530_001946_host exp exponent](https://github.com/TheGhostHub/ReactNative-CRUD-MobileApp-MongoDB/assets/67100910/e2b3a526-dba1-447d-8645-0a6c6080a0d4)
+![Screenshot_20230530_002007_host exp exponent](https://github.com/TheGhostHub/ReactNative-CRUD-MobileApp-MongoDB/assets/67100910/eef2d7b8-dbd7-4237-a064-7728e5bf2f36)
+![Screenshot_20230530_002013_host exp exponent](https://github.com/TheGhostHub/ReactNative-CRUD-MobileApp-MongoDB/assets/67100910/36df33bd-e5b7-473e-bf94-514e719ecd11)
+![Screenshot_20230530_002020_host exp exponent](https://github.com/TheGhostHub/ReactNative-CRUD-MobileApp-MongoDB/assets/67100910/e6d02c4f-6958-42a1-922a-d3009fdb4267)
+![Screenshot_20230530_002024_host exp exponent](https://github.com/TheGhostHub/ReactNative-CRUD-MobileApp-MongoDB/assets/67100910/31b71acb-1215-4048-a4ba-12f40f825e2b)
